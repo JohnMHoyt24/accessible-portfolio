@@ -78,6 +78,7 @@
   width: 250px;
   height: 350px;
   border-radius: 12px;
+  /* or 0 for sharp corners */
   overflow: hidden;
   border: 4px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -107,12 +108,12 @@
     gap: 3rem;
     text-align: center;
   }
-  
+
   .about-text h2 {
     text-align: center;
     font-size: 2.5rem;
   }
-  
+
   .profile-image {
     width: 200px;
     height: 280px;
@@ -123,25 +124,25 @@
   .about-section {
     padding: 60px 15px 40px;
   }
-  
+
   .about-text h2 {
     font-size: 2rem;
   }
-  
+
   .about-description {
     font-size: 1.1rem;
   }
-  
+
   .about-highlights {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-top: 2rem;
   }
-  
+
   .highlight-item {
     padding: 1.5rem;
   }
-  
+
   .profile-image {
     width: 160px;
     height: 224px;
@@ -152,19 +153,19 @@
   .about-text h2 {
     font-size: 1.8rem;
   }
-  
+
   .about-description {
     font-size: 1rem;
   }
-  
+
   .highlight-item {
     padding: 1rem;
   }
-  
+
   .highlight-item h3 {
     font-size: 1.1rem;
   }
-  
+
   .profile-image {
     width: 120px;
     height: 168px;
@@ -177,16 +178,16 @@
     background: #000000;
     color: #ffffff;
   }
-  
+
   .highlight-item {
     background: #333333;
     border: 2px solid #ffffff;
   }
-  
+
   .profile-image {
     border: 4px solid #ffffff;
   }
-  
+
   .image-placeholder {
     background: #333333;
     color: #ffffff;
@@ -198,7 +199,7 @@
   .highlight-item {
     transition: none;
   }
-  
+
   .highlight-item:hover {
     transform: none;
   }
