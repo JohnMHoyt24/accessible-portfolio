@@ -25,10 +25,10 @@ const Contact = () => {
     setSubmitStatus("");
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -44,7 +44,7 @@ const Contact = () => {
         setTimeout(() => setSubmitStatus(""), 5000);
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
       setSubmitStatus("error");
       setTimeout(() => setSubmitStatus(""), 5000);
     } finally {
@@ -115,7 +115,8 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-form-container">
+          {/*Need to troublshoot server.js for issues with sending emails via backend.*/}
+          {/*<div className="contact-form-container">
               <form className="contact-form" onSubmit={handleSubmit}>
                 <h3>Send a Message</h3>
 
@@ -218,7 +219,7 @@ const Contact = () => {
                   </div>
                 )}
               </form>
-          </div>
+          </div>*/}
         </div>
       </div>
     </section>
