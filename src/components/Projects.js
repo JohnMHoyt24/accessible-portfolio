@@ -94,7 +94,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="projects-showcase">
+        {/*<div className="projects-showcase">
           <div className="project-main">
             <div className="project-image">
               <img
@@ -180,7 +180,7 @@ const Projects = () => {
               Next →
             </button>
           </div>
-        </div>
+        </div>*/}
       </div>
     </section>
   );
