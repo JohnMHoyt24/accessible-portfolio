@@ -6,9 +6,11 @@
   "scripts": {
     "test": "react-scripts test",
     "start": "react-scripts start",
+    "backend": "node server.js",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:3001",
   "keywords": [],
   "author": "",
   "license": "ISC",
