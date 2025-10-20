@@ -4,7 +4,7 @@ import "./Skills.css";
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Languages & Libraries",
       skills: [
         {
           name: "React",
@@ -33,6 +33,10 @@ const Skills = () => {
       title: "Tools & Technologies",
       skills: [
         {
+          name: "Drupal",
+          description: "Content management system for building websites"
+        },
+        {
           name: "Git",
           description:
             "Version control system for tracking changes in source code",
@@ -42,7 +46,10 @@ const Skills = () => {
           description:
             "JavaScript runtime for building server-side applications",
         },
-        { name: "NPM", description: "Package manager for JavaScript" },
+        { name: "NPM", 
+          description: "Package manager for JavaScript" },
+        { name: "SQL",
+          description: "Structured Query Language for managing relational databases"}
       ],
     },
   ];
@@ -57,20 +64,22 @@ const Skills = () => {
             areas
           </p>
         </div>
-        <div className="skill-cards">
-          {/*Iterate through each skill from the array and display the skill name 
-          and description in a card*/}
-          {skillCategories.map((skill, index) => (
-            <div key={index} className="skill-card">
-              <div className="skill-content">
-                <h3 className="skill-name">{skill.skills.name}</h3>
-                <p className="skill-description">{skill.skills.description}</p>
+        <div className="skill-categories">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="skill-category">
+              <h3>{category.title}</h3>
+              <div className="skill-cards">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="skill-card">
+                    <div className="skill-content">
+                      <h4 className="skill-name">{skill.name}</h4>
+                      <p className="skill-description">{skill.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
-          <div className="skill-card">
-            <div className="skill-content"></div>
-          </div>
         </div>
       </div>
     </section>
