@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import profileImage from "../assets/profile.jpg"
 
 const About = () => {
   return (
@@ -12,13 +13,21 @@ const About = () => {
               I'm a passionate developer with a strong focus on creating
               accessible, user-friendly websites and applications. With
               expertise in modern web technologies, I believe in building
-              digital solutions that are engaging to use.
+              digital solutions that are engaging and easy to use.
             </p>
             <p className="about-description">
               My journey in web development has taught me the importance of
               resourcefulness, adaptability, and continuous learning. I'm always
               eager to take on new challenges that benefit both users and the
               organization.
+            </p>
+            <p className="about-description">
+              This website is a platform for me to showcase my skills and
+              I plan to continually update it with new projects and features.
+            </p>
+            <p className="about-description">
+              Outside of coding, I enjoy reading classic literature, going to the
+              movies, and spending time with friends and family.
             </p>
             <div className="about-highlights">
               <div className="highlight-item">
@@ -51,7 +60,7 @@ const About = () => {
               aria-label="Profile picture of the developer"
             >
               <div className="image-placeholder">
-                <span className="image-text">Your Photo Here</span>
+                <span className="image-text"><img src={profileImage} width="250" height="350"/></span>
               </div>
             </div>
           </div>
