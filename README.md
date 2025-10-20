@@ -8,7 +8,3 @@ A modern, engaging portfolio website built with React that prioritizes accessibi
 - **CSS3**: Custom styling with CSS Grid and Flexbox
 - **HTML5**: Semantic markup
 - **JavaScript ES6+**: Modern JavaScript features
-
-## Contact
-
-For questions about this portfolio, please reach out through the contact form on the website.
