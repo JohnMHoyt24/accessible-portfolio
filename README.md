@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, engaging portfolio website built with React that prioritizes accessibility and inclusive design. This portfolio demonstrates best practices for creating web experiences that work for users with diverse abilities.
+My professional website to showcase my technical skills. I plan to continually update this site with new skills and projects.
 
 ## Technologies Used
 
