@@ -59,9 +59,11 @@ const About = () => {
               role="img"
               aria-label="Profile picture of the developer"
             >
-              <div className="image-placeholder">
-                <span className="image-text"><img src={profileImage} width="250" height="350"/></span>
-              </div>
+              <img 
+                src={profileImage} 
+                alt="Profile picture of the developer"
+                className="profile-img"
+              />
             </div>
           </div>
         </div>
