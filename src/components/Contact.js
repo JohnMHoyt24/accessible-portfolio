@@ -60,14 +60,8 @@ const Contact = () => {
       description: "Send me an email anytime",
     },
     {
-      type: "Phone",
-      value: "(513) 405-7392",
-      icon: "📞",
-      description: "Call me during business hours",
-    },
-    {
       type: "LinkedIn",
-      value: "linkedin.com/in/yourprofile",
+      value: "https://www.linkedin.com/in/john-m-hoyt/",
       icon: "💼",
       description: "Connect with me professionally",
     },
@@ -77,6 +71,12 @@ const Contact = () => {
       icon: "💻",
       description: "Check out my code repositories",
     },
+    {
+      type: "Phone",
+      value: "(513) 405-7392",
+      icon: "📞",
+      description: "Call me during business hours",
+    }
   ];
 
   return (
