@@ -9,6 +9,8 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   // State to track which navigation section is currently active/selected
   const [activeSection, setActiveSection] = useState('about');
+  // State to track whether the mobile menu is open
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // useEffect hook to handle scroll events and determine when navbar should become sticky
   useEffect(() => {
@@ -46,6 +48,13 @@ const Navbar = () => {
     setActiveSection(sectionId);
     // Scroll to the corresponding section on the page
     scrollToSection(sectionId);
+    // Close mobile menu after navigation
+    setIsMobileMenuOpen(false);
+  };
+
+  // Function to toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   // Return the JSX structure for the navigation bar
@@ -63,8 +72,23 @@ const Navbar = () => {
         <div className="navbar-brand">
           <h1>John's World</h1>
         </div>
+        
+        {/* Mobile menu button */}
+        <button
+          className="mobile-menu-button"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+          aria-expanded={isMobileMenuOpen}
+        >
+          <span className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        
         {/* Navigation menu list */}
-        <ul className="navbar-menu" role="menubar">
+        <ul className={`navbar-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`} role="menubar">
           {/* About Me navigation item */}
           <li role="none">
             <button

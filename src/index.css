@@ -25,6 +25,27 @@ body {
   outline-offset: 2px;
 }
 
+/* Touch target improvements for mobile */
+button, 
+.nav-link, 
+.project-link, 
+.submit-button,
+.mobile-menu-button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Ensure proper spacing for touch interactions */
+@media (max-width: 768px) {
+  button, 
+  .nav-link, 
+  .project-link, 
+  .submit-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
 /* Skip to content link for screen readers */
 .skip-link {
   position: absolute;
