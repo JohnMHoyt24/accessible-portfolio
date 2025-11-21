@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import "./Carousel.css";
+import Card from './Card';
 
 const Carousel = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
@@ -27,7 +28,8 @@ const Carousel = () => {
         <div className="embla">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
-                    <div className="embla__slide">Slide 1</div>
+                    <div className="embla__slide"><Card title="Advice Generator" description="Receive advice that's generated randomly
+                    by the click of a button!" /></div>
                     <div className="embla__slide">Slide 2</div>
                     <div className="embla__slide">Slide 3</div>
                 </div>
