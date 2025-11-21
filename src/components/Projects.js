@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Carousel from "./Carousel";
+import Card from "./Card";
 import "./Projects.css";
 
 const Projects = () => {
@@ -96,9 +96,23 @@ const Projects = () => {
         </div>
 
         <div className="projects-showcase">
-          <Carousel />
+          <div className="projects-grid">
+            <h3>Recent Work</h3>
+            <div className="grid">
+              {projects.map((p, i) => (
+                <Card
+                  key={i}
+                  title={p.title}
+                  description={p.description}
+                  url={p.liveUrl}
+                  image={p.image}
+                  technologies={p.technologies}
+                />
+              ))}
+            </div>
           </div>
         </div>
+      </div>
     </section>
   );
 };
