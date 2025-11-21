@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Card from "./Card";
+import Carousel from "./Carousel";
 import "./Projects.css";
 
 const Projects = () => {
-  const [activeProject, setActiveProject] = useState(0);
-
   const projects = [
     {
       title: "Accessible E-Commerce Platform",
@@ -72,18 +71,6 @@ const Projects = () => {
     },
   ];
 
-  const nextProject = () => {
-    setActiveProject((prev) => (prev + 1) % projects.length);
-  };
-
-  const prevProject = () => {
-    setActiveProject((prev) => (prev - 1 + projects.length) % projects.length);
-  };
-
-  const goToProject = (index) => {
-    setActiveProject(index);
-  };
-
   return (
     <section id="projects" className="projects-section">
       <div className="projects-container">
@@ -96,21 +83,18 @@ const Projects = () => {
         </div>
 
         <div className="projects-showcase">
-          <div className="projects-grid">
-            <h3>Recent Work</h3>
-            <div className="grid">
-              {projects.map((p, i) => (
-                <Card
-                  key={i}
-                  title={p.title}
-                  description={p.description}
-                  url={p.liveUrl}
-                  image={p.image}
-                  technologies={p.technologies}
-                />
-              ))}
-            </div>
-          </div>
+          <Carousel>
+            {projects.map((p, i) => (
+              <Card
+                key={i}
+                title={p.title}
+                description={p.description}
+                url={p.liveUrl}
+                image={p.image}
+                technologies={p.technologies}
+              />
+            ))}
+          </Carousel>
         </div>
       </div>
     </section>

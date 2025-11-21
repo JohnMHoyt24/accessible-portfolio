@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import "./Carousel.css";
-import Card from './Card';
 
-const Carousel = () => {
+const Carousel = ({ children }) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
     const [canScrollPrev, setCanScrollPrev] = useState(false);
     const [canScrollNext, setCanScrollNext] = useState(false);
@@ -28,10 +27,11 @@ const Carousel = () => {
         <div className="embla">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
-                    <div className="embla__slide"><Card title="Advice Generator" description="Receive advice that's generated randomly
-                    by the click of a button!" /></div>
-                    <div className="embla__slide">Slide 2</div>
-                    <div className="embla__slide">Slide 3</div>
+                    {children && Array.isArray(children) && children.map((child, i) => (
+                        <div key={i} className="embla__slide">
+                            {child}
+                        </div>
+                    ))}
                 </div>
             </div>
             <button
