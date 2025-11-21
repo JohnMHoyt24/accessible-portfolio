@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Carousel from "./Carousel";
 import "./Projects.css";
 
 const Projects = () => {
@@ -94,94 +95,10 @@ const Projects = () => {
           </p>
         </div>
 
-        {/*<div className="projects-showcase">
-          <div className="project-main">
-            <div className="project-image">
-              <img
-                src={projects[activeProject].image}
-                alt={`Screenshot of ${projects[activeProject].title}`}
-                className="project-screenshot"
-              />
-              <div className="project-overlay">
-                <div className="project-links">
-                  <a
-                    href={projects[activeProject].liveUrl}
-                    className="project-link live-link"
-                    aria-label={`View live demo of ${projects[activeProject].title}`}
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href={projects[activeProject].githubUrl}
-                    className="project-link github-link"
-                    aria-label={`View source code for ${projects[activeProject].title}`}
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="project-content">
-              <h3 className="project-title">{projects[activeProject].title}</h3>
-              <p className="project-description">
-                {projects[activeProject].description}
-              </p>
-
-              <div className="project-technologies">
-                <h4>Technologies Used:</h4>
-                <div className="tech-tags">
-                  {projects[activeProject].technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="project-features">
-                <h4>Key Features:</h4>
-                <ul className="features-list">
-                  {projects[activeProject].features.map((feature, index) => (
-                    <li key={index} className="feature-item">
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+        <div className="projects-showcase">
+          <Carousel />
           </div>
-
-          <div className="project-navigation">
-            <button
-              className="nav-button prev-button"
-              onClick={prevProject}
-              aria-label="Previous project"
-            >
-              ← Previous
-            </button>
-
-            <div className="project-dots">
-              {projects.map((_, index) => (
-                <button
-                  key={index}
-                  className={`dot ${index === activeProject ? "active" : ""}`}
-                  onClick={() => goToProject(index)}
-                  aria-label={`Go to project ${index + 1}: ${projects[index].title}`}
-                />
-              ))}
-            </div>
-
-            <button
-              className="nav-button next-button"
-              onClick={nextProject}
-              aria-label="Next project"
-            >
-              Next →
-            </button>
-          </div>
-        </div>*/}
-      </div>
+        </div>
     </section>
   );
 };
