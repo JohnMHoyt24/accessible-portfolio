@@ -6,68 +6,31 @@ import "./Projects.css";
 const Projects = () => {
   const projects = [
     {
-      title: "Accessible E-Commerce Platform",
+      title: "Advice Generator",
       description:
-        "A fully accessible online shopping platform built with React and Node.js, featuring screen reader compatibility, keyboard navigation, and WCAG 2.1 AA compliance.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
-      features: [
-        "Screen reader optimized product browsing",
-        "Keyboard-only navigation support",
-        "High contrast mode compatibility",
-        "Voice search functionality",
-      ],
+        "A tool used to receive random pieces of advice via an external API.",
+      technologies: ["React", "TypeScript", "Tailwind", "Vite"],
       image:
         "https://via.placeholder.com/600x400/007bff/ffffff?text=E-Commerce+Platform",
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://advice-generator-ecru-iota.vercel.app/",
     },
     {
-      title: "Inclusive Learning Management System",
+      title: "Sign-Up Form",
       description:
-        "An educational platform designed for students with diverse learning needs, featuring customizable interfaces and multiple content delivery methods.",
-      technologies: ["React", "TypeScript", "Express", "PostgreSQL"],
-      features: [
-        "Text-to-speech integration",
-        "Customizable font sizes and colors",
-        "Video captions and transcripts",
-        "Progress tracking for different learning styles",
-      ],
+        "A simple sign-up form with real-time validation and error messaging.",
+      technologies: ["React", "TypeScript", "CSS"],
       image:
         "https://via.placeholder.com/600x400/28a745/ffffff?text=LMS+Platform",
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://signup-form-jsnm.vercel.app/"
     },
     {
-      title: "Accessibility Testing Dashboard",
+      title: "Rating System",
       description:
-        "A comprehensive tool for testing and monitoring website accessibility compliance across multiple pages and devices.",
-      technologies: ["Vue.js", "Python", "Selenium", "Docker"],
-      features: [
-        "Automated accessibility scanning",
-        "Real-time compliance monitoring",
-        "Detailed accessibility reports",
-        "Integration with CI/CD pipelines",
-      ],
+        "A simple rating system with a scale from 1 to 5. Displays a thank you message upon submission.",
+      technologies: ["HTML", "CSS", "JavaScript"],
       image:
         "https://via.placeholder.com/600x400/dc3545/ffffff?text=Testing+Dashboard",
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Voice-Controlled Portfolio",
-      description:
-        "An innovative portfolio website that can be navigated entirely through voice commands, designed for users with motor disabilities.",
-      technologies: ["React", "Web Speech API", "Three.js", "WebRTC"],
-      features: [
-        "Complete voice navigation",
-        "Gesture recognition support",
-        "Eye-tracking compatibility",
-        "Multi-language voice support",
-      ],
-      image:
-        "https://via.placeholder.com/600x400/6f42c1/ffffff?text=Voice+Portfolio",
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://rating-system-jet.vercel.app/"
     },
   ];
 
