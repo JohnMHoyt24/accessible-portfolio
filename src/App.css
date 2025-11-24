@@ -1,10 +1,14 @@
 .App {
   text-align: center;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Main content spacing */
 main {
   padding-top: 80px; /* Account for fixed navbar */
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Section spacing */
