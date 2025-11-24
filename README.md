@@ -8,3 +8,4 @@ My professional website to showcase my technical skills. I plan to continually u
 - **CSS3**: Custom styling with CSS Grid and Flexbox
 - **HTML5**: Semantic markup
 - **JavaScript ES6+**: Modern JavaScript features
+- **Embla API**: React library for creating the project carousel
