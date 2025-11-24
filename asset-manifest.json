@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/accessible-portfolio/static/css/main.0b22bdce.css",
-    "main.js": "/accessible-portfolio/static/js/main.7986ae5b.js",
+    "main.css": "/accessible-portfolio/static/css/main.e4ea1665.css",
+    "main.js": "/accessible-portfolio/static/js/main.73e195ca.js",
     "static/media/profile.jpg": "/accessible-portfolio/static/media/profile.eaabf4f57b395536466f.jpg",
+    "static/media/learn_to_code.png": "/accessible-portfolio/static/media/learn_to_code.e1ff8d4eb67d37f51568.png",
+    "static/media/rating_system.png": "/accessible-portfolio/static/media/rating_system.3b10c36fb66ce5be4e0e.png",
+    "static/media/advice_generator.png": "/accessible-portfolio/static/media/advice_generator.2db6e6be28d9309fd244.png",
     "index.html": "/accessible-portfolio/index.html",
-    "main.0b22bdce.css.map": "/accessible-portfolio/static/css/main.0b22bdce.css.map",
-    "main.7986ae5b.js.map": "/accessible-portfolio/static/js/main.7986ae5b.js.map"
+    "main.e4ea1665.css.map": "/accessible-portfolio/static/css/main.e4ea1665.css.map",
+    "main.73e195ca.js.map": "/accessible-portfolio/static/js/main.73e195ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b22bdce.css",
-    "static/js/main.7986ae5b.js"
+    "static/css/main.e4ea1665.css",
+    "static/js/main.73e195ca.js"
   ]
 }
