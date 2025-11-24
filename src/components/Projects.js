@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Card from "./Card";
 import Carousel from "./Carousel";
 import "./Projects.css";
+import adviceGeneratorImage from "../assets/advice_generator.png";
+import learnToCodeImage from "../assets/learn_to_code.png";
+import ratingSystemImage from "../assets/rating_system.png";
 
 const Projects = () => {
   const projects = [
@@ -10,8 +13,7 @@ const Projects = () => {
       description:
         "A tool used to receive random pieces of advice via an external API.",
       technologies: ["React", "TypeScript", "Tailwind", "Vite"],
-      image:
-        "https://via.placeholder.com/600x400/007bff/ffffff?text=E-Commerce+Platform",
+      image: adviceGeneratorImage,
       liveUrl: "https://advice-generator-ecru-iota.vercel.app/",
     },
     {
@@ -19,8 +21,7 @@ const Projects = () => {
       description:
         "A simple sign-up form with real-time validation and error messaging.",
       technologies: ["React", "TypeScript", "CSS"],
-      image:
-        "https://via.placeholder.com/600x400/28a745/ffffff?text=LMS+Platform",
+      image: learnToCodeImage,
       liveUrl: "https://signup-form-jsnm.vercel.app/"
     },
     {
@@ -28,8 +29,7 @@ const Projects = () => {
       description:
         "A simple rating system with a scale from 1 to 5. Displays a thank you message upon submission.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      image:
-        "https://via.placeholder.com/600x400/dc3545/ffffff?text=Testing+Dashboard",
+      image: ratingSystemImage,
       liveUrl: "https://rating-system-jet.vercel.app/"
     },
   ];
