@@ -1,4 +1,3 @@
-import React from "react";
 import "./About.css";
 import profileImage from "../assets/profile.jpg"
 
@@ -13,12 +12,11 @@ const About = () => {
               I'm a passionate developer with a strong focus on creating
               accessible, user-friendly websites and applications. With
               expertise in modern web technologies, I believe in building
-              digital solutions that are engaging and easy to use.
+              digital solutions that are <em>engaging</em> and <em>easy to use</em>.
             </p>
             <p className="about-description">
-              My journey in web development has taught me the importance of
-              resourcefulness, adaptability, and continuous learning. I'm always
-              eager to take on new challenges that benefit both users and the
+              My journey in web development has taught me the importance of <strong>resourcefulness</strong>, <strong>adaptability</strong>, and <strong>continuous learning</strong>. I'm always
+              eager to take on new challenges that benefit both the users and the
               organization.
             </p>
             <p className="about-description">
