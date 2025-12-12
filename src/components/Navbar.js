@@ -1,5 +1,5 @@
 // Import React hooks for state management and side effects
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // Import CSS styles for the navbar component
 import './Navbar.css';
 
@@ -101,6 +101,17 @@ const Navbar = () => {
               aria-current={activeSection === 'about' ? 'page' : undefined}
             >
               About Me
+            </button>
+          </li>
+          <li>
+            {/* Quotes navigation item */}
+            <button
+              className={`nav-link ${activeSection === 'quotes' ? 'active' : ''}`}
+              onClick={() => handleNavClick('quotes')}
+              role="menuitem"
+              aria-current={activeSection === 'quotes' ? 'page' : undefined}
+            >
+              Quotes
             </button>
           </li>
           {/* My Skills navigation item */}
