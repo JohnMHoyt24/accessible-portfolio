@@ -1,6 +1,6 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import Quotes from './components/Quotes';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -16,6 +16,7 @@ function App() {
       <Navbar />
       <main id="main-content">
         <About />
+        <Quotes />
         <Skills />
         <Projects />
         <Contact />
