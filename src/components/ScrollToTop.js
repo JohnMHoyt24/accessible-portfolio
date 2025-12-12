@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import "./ScrollToTop.css";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +33,7 @@ const ScrollToTop = () => {
           aria-label="Scroll to top"
           className="scroll-button"
         >
-          ↑ Top
+          ↑
         </button>
       )}
     </div>
