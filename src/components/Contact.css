@@ -94,13 +94,17 @@
 }
 
 .method-value {
-  font-size: 1rem;
-  color: #007bff;
+  border: transparent;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: #5b74f3;
+  color: #ffffff;
+  text-decoration: none;
   font-weight: 500;
-  margin-bottom: 0.3rem;
-  word-break: break-all;
-  overflow-wrap: break-word;
-  hyphens: auto;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
 .method-description {

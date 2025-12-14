@@ -55,7 +55,7 @@ const Contact = () => {
   const contactMethods = [
     {
       type: "Email",
-      value: "jmhoyt6355@gmail.com",
+      value: "mailto:jmhoyt6355@gmail.com?subject=Contact%20from%20Portfolio",
       icon: "✉️",
       description: "Send me an email anytime",
     },
@@ -70,12 +70,6 @@ const Contact = () => {
       value: "https://github.com/JohnMHoyt24",
       icon: "💻",
       description: "Check out my code repositories",
-    },
-    {
-      type: "Phone",
-      value: "(513) 405-7392",
-      icon: "📞",
-      description: "Call me during business hours",
     }
   ];
 
@@ -107,8 +101,8 @@ const Contact = () => {
                   </div>
                   <div className="method-content">
                     <h4>{method.type}</h4>
-                    <p className="method-value">{method.value}</p>
                     <p className="method-description">{method.description}</p>
+                    <a className="method-value" href={method.value} target="_blank">Click to {method.type}</a>
                   </div>
                 </div>
               ))}
