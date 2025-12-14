@@ -1,4 +1,14 @@
 import "./Skills.css";
+import reactIcon from "../assets/react.png";
+import jsIcon from "../assets/js.png";
+import htmlIcon from "../assets/html.png";
+import cssIcon from "../assets/css.png";
+import tsIcon from "../assets/ts.png";
+import drupalIcon from "../assets/drupal.png";
+import gitIcon from "../assets/git.png";
+import nodeIcon from "../assets/node-js.png";
+import npmIcon from "../assets/npm.png";
+import sqlIcon from "../assets/sql.png";
 
 const Skills = () => {
   const skillCategories = [
@@ -8,23 +18,28 @@ const Skills = () => {
         {
           name: "React",
           description: "JavaScript library for building user interfaces",
+          icon: reactIcon
         },
         {
           name: "JavaScript",
           description:
             "Programming language for making web projects interactive",
+          icon: jsIcon
         },
         {
           name: "HTML5",
           description: "Markup language for structuring web content",
+          icon: htmlIcon
         },
         {
           name: "CSS3",
           description: "Styling language for designing web layouts",
+          icon: cssIcon
         },
         {
           name: "TypeScript",
           description: "Superset of JavaScript that adds static types",
+          icon: tsIcon
         },
       ],
     },
@@ -33,22 +48,29 @@ const Skills = () => {
       skills: [
         {
           name: "Drupal",
-          description: "Content management system for building websites"
+          description: "Content management system for building websites",
+          icon: drupalIcon
         },
         {
           name: "Git",
           description:
             "Version control system for tracking changes in source code",
+          icon: gitIcon
         },
         {
           name: "Node.js",
           description:
             "JavaScript runtime for building server-side applications",
+          icon: nodeIcon
         },
         { name: "NPM", 
-          description: "Package manager for JavaScript" },
+          description: "Package manager for JavaScript",
+          icon: npmIcon
+        },
         { name: "SQL",
-          description: "Structured Query Language for managing relational databases"}
+          description: "Structured Query Language for managing relational databases",
+          icon: sqlIcon
+        }
       ],
     },
   ];
@@ -71,6 +93,7 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="skill-card">
                     <div className="skill-content">
+                      <img src={skill.icon} alt={skill.name} />
                       <h4 className="skill-name">{skill.name}</h4>
                       <p className="skill-description">{skill.description}</p>
                     </div>
