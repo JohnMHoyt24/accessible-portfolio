@@ -1,5 +1,5 @@
 import "./About.css";
-import profileImage from "../assets/profile.jpg"
+import happyImage from "../assets/happy.jpg";
 
 const About = () => {
   return (
@@ -58,8 +58,8 @@ const About = () => {
               aria-label="Profile picture of the developer"
             >
               <img 
-                src={profileImage} 
-                alt="Profile picture of the developer"
+                src={happyImage} 
+                alt="Profile picture of me with my dog, Happy."
                 className="profile-img"
               />
             </div>
