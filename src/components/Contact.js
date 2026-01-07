@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Contact.css";
+import happyImage from "../assets/happy.jpg";
+import profileImage from "../assets/profile.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -78,10 +80,23 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-header">
           <h2>Get In Touch</h2>
-          <p className="contact-subtitle">
+          <div className="about-image">
+            <div
+              className="profile-image"
+              role="img"
+              aria-label="Profile picture of the developer"
+            >
+              <img 
+                src={profileImage} 
+                alt="A professional picture of me, the developer."
+                className="profile-img"
+              />
+            </div>
+          </div>
+          {/*<p className="contact-subtitle">
             I'm always interested in new opportunities and collaborations. Let's
             building something great together!
-          </p>
+          </p>*/}
         </div>
 
         <div className="contact-content">
