@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/accessible-portfolio/static/css/main.04249956.css",
-    "main.js": "/accessible-portfolio/static/js/main.150db8ce.js",
+    "main.css": "/accessible-portfolio/static/css/main.b9ddcf72.css",
+    "main.js": "/accessible-portfolio/static/js/main.91c85f38.js",
     "static/media/happy.jpg": "/accessible-portfolio/static/media/happy.268717182c511f48043b.jpg",
     "static/media/profile.jpg": "/accessible-portfolio/static/media/profile.eaabf4f57b395536466f.jpg",
     "static/media/learn_to_code.png": "/accessible-portfolio/static/media/learn_to_code.e1ff8d4eb67d37f51568.png",
+    "static/media/mortgage_calculator.png": "/accessible-portfolio/static/media/mortgage_calculator.0a2b37def0cd5b4c2dd0.png",
     "static/media/rating_system.png": "/accessible-portfolio/static/media/rating_system.3b10c36fb66ce5be4e0e.png",
     "static/media/advice_generator.png": "/accessible-portfolio/static/media/advice_generator.2db6e6be28d9309fd244.png",
     "index.html": "/accessible-portfolio/index.html",
-    "main.04249956.css.map": "/accessible-portfolio/static/css/main.04249956.css.map",
-    "main.150db8ce.js.map": "/accessible-portfolio/static/js/main.150db8ce.js.map"
+    "main.b9ddcf72.css.map": "/accessible-portfolio/static/css/main.b9ddcf72.css.map",
+    "main.91c85f38.js.map": "/accessible-portfolio/static/js/main.91c85f38.js.map"
   },
   "entrypoints": [
-    "static/css/main.04249956.css",
-    "static/js/main.150db8ce.js"
+    "static/css/main.b9ddcf72.css",
+    "static/js/main.91c85f38.js"
   ]
 }
