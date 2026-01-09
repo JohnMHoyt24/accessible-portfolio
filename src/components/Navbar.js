@@ -69,7 +69,7 @@ const Navbar = () => {
       {/* Container div to hold the navbar content */}
       <div className="navbar-container">
         {/* Brand/logo section of the navbar */}
-        <div className="navbar-brand">
+        <div className="navbar-brand navbar-title">
           <h1>John's World</h1>
         </div>
         
