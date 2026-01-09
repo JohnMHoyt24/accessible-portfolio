@@ -1,12 +1,21 @@
 import Card from "./Card";
 import Carousel from "./Carousel";
 import "./Projects.css";
+import mortgageCalculatorImage from "../assets/mortgage_calculator.png";
 import adviceGeneratorImage from "../assets/advice_generator.png";
 import learnToCodeImage from "../assets/learn_to_code.png";
 import ratingSystemImage from "../assets/rating_system.png";
 
 const Projects = () => {
   const projects = [
+    {
+      title:"Mortgage Calculator",
+      description:
+        "A tool used to calculate the monthly payment for a mortgage.",
+      technologies: ["React", "TypeScript", "Tailwind", "Vite", "Jest"],
+      image: mortgageCalculatorImage,
+      liveUrl: "https://mortgage-repayment-calculator-flax.vercel.app/"
+    },
     {
       title: "Advice Generator",
       description:
