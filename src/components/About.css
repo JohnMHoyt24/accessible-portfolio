@@ -7,8 +7,20 @@
   }
 }
 
+@property --gradient-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 135deg;
+}
+
 .about-section {
-  background: linear-gradient(135deg, var(--gradient-hero-start) 0%, var(--gradient-hero-end) 100%);
+  --gradient-angle: 135deg;
+  background: linear-gradient(
+    var(--gradient-angle),
+    var(--gradient-hero-start) 0%,
+    var(--gradient-hero-end) 100%
+  );
+  transition: --gradient-angle 0.4s ease;
   color: white;
   display: flex;
   align-items: center;
@@ -148,6 +160,10 @@
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+  .about-section {
+    transition: none;
+  }
+
   .highlight-item {
     transition: none;
   }
