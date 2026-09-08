@@ -12,7 +12,8 @@ const Card = ({ title, description, url, image, technologies = [] }) => {
         <h4>{title}</h4>
         <p>{description}</p>
         {technologies.length > 0 && (
-          <div className="card-tech" aria-hidden>
+          <div className="card-tech">
+            <span className="sr-only">Technologies used: </span>
             {technologies.map((tech, i) => (
               <span key={i} className="card-tech-tag">
                 {tech}
@@ -29,6 +30,7 @@ const Card = ({ title, description, url, image, technologies = [] }) => {
               rel="noopener noreferrer"
             >
               View Project
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </p>
         )}

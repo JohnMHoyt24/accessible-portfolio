@@ -1,8 +1,7 @@
 .projects-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--gradient-hero-start) 0%, var(--gradient-hero-end) 100%);
   color: white;
-  padding: 80px 20px 60px;
-  min-height: 100vh;
+  padding: 60px 20px 40px;
 }
 
 .projects-container {
@@ -12,7 +11,7 @@
 
 .projects-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .projects-header h2 {
@@ -30,15 +29,15 @@
 }
 
 .projects-showcase {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .project-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: start;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-image {
@@ -85,7 +84,7 @@
 
 .project-link {
   padding: 0.8rem 1.5rem;
-  background: #007bff;
+  background: var(--color-primary);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -94,7 +93,7 @@
 }
 
 .project-link:hover {
-  background: #0056b3;
+  background: var(--color-primary-hover);
   transform: translateY(-2px);
 }
 
@@ -120,13 +119,13 @@
 .project-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   opacity: 0.95;
 }
 
 .project-technologies,
 .project-features {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .project-technologies h4,
@@ -167,7 +166,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #28a745;
+  color: var(--color-success);
   font-weight: bold;
 }
 
@@ -197,7 +196,7 @@
 }
 
 .nav-button:focus {
-  outline: 3px solid #007bff;
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -255,7 +254,7 @@
 }
 
 .project-card.active {
-  border: 2px solid #007bff;
+  border: 2px solid var(--color-primary);
   box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
 }
 
@@ -315,7 +314,7 @@
 
 @media (max-width: 768px) {
   .projects-section {
-    padding: 60px 15px 40px;
+    padding: 40px 15px 30px;
   }
   
   .projects-header h2 {
@@ -368,7 +367,7 @@
   }
   
   .project-card.active {
-    border-color: #007bff;
+    border-color: var(--color-primary);
   }
   
   .tech-tag,

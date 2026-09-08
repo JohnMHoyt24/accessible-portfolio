@@ -1,7 +1,6 @@
 .contact-section {
-  background-color: #f8f9fa;
-  padding: 80px 20px 60px;
-  min-height: 100vh;
+  background-color: var(--color-bg);
+  padding: 60px 20px 40px;
 }
 
 .contact-container {
@@ -11,19 +10,19 @@
 
 .contact-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .contact-header h2 {
   font-size: 3rem;
   font-weight: 700;
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 1rem;
 }
 
 .contact-subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--color-text-muted);
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
@@ -32,29 +31,28 @@
 .contact-content {
   display: grid;
   /*grid-template-columns: 1fr 1fr;*/
-  gap: 4rem;
-  
+  gap: 2rem;
 }
 
 .contact-info h3 {
   font-size: 2rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 1.5rem;
 }
 
 .contact-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #666;
-  margin-bottom: 2rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
 }
 
 .contact-methods {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -89,7 +87,7 @@
 .method-content h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 0.3rem;
 }
 
@@ -109,87 +107,13 @@
 
 .method-description {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--color-text-muted);
   line-height: 1.4;
-}
-
-.about-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-image {
-  width: 250px;
-  height: 350px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-.profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-.availability {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.availability h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.availability p {
-  color: #666;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.status-indicator {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  color: #28a745;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background: #28a745;
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 .contact-form-container {
   background: white;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -197,8 +121,8 @@
 .contact-form h3 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #333;
-  margin-bottom: 2rem;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
   text-align: center;
 }
 
@@ -209,7 +133,7 @@
 .form-label {
   display: block;
   font-weight: 600;
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
@@ -218,7 +142,7 @@
 .form-textarea {
   width: 100%;
   padding: 0.8rem 1rem;
-  border: 2px solid #e9ecef;
+  border: 2px solid var(--color-border);
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -228,7 +152,7 @@
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
@@ -239,13 +163,13 @@
 
 .form-help {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--color-text-muted);
   margin-top: 0.3rem;
 }
 
 .submit-button {
   width: 100%;
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -258,7 +182,7 @@
 }
 
 .submit-button:hover:not(:disabled) {
-  background: linear-gradient(135deg, #0056b3, #004085);
+  background: linear-gradient(135deg, var(--color-primary-hover), var(--color-primary-active));
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
@@ -271,7 +195,7 @@
 }
 
 .submit-button:focus {
-  outline: 3px solid #007bff;
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -305,17 +229,11 @@
   .contact-form-container {
     padding: 2rem;
   }
-
-  .profile-image {
-    width: 220px;
-    height: 308px;
-    max-width: 80vw;
-  }
 }
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 60px 15px 40px;
+    padding: 40px 15px 30px;
   }
 
   .contact-header h2 {
@@ -342,12 +260,6 @@
 
   .contact-form h3 {
     font-size: 1.5rem;
-  }
-
-  .profile-image {
-    width: 200px;
-    height: 280px;
-    max-width: 90vw;
   }
 }
 
@@ -382,20 +294,12 @@
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
   }
-
-  .profile-image {
-    width: 150px;
-    height: 210px;
-    max-width: 85vw;
-    max-height: 60vh;
-  }
 }
 
 /* High contrast mode */
 @media (prefers-contrast: high) {
 
   .contact-method,
-  .availability,
   .contact-form-container {
     background: #ffffff;
     border: 2px solid #000000;
@@ -408,8 +312,8 @@
 
   .form-input:focus,
   .form-textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 3px #007bff;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary);
   }
 
   .submit-button {
@@ -421,18 +325,10 @@
   .submit-button:hover:not(:disabled) {
     background: #333333;
   }
-
-  .profile-image {
-    border: 4px solid #ffffff;
-  }
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .status-dot {
-    animation: none;
-  }
-
   .contact-method:hover {
     transform: none;
   }

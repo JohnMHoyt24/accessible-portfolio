@@ -1,5 +1,4 @@
-//require("dotenv").config();
-//import * as dotenv from 'dotenv';
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const { Resend } = require("resend");
@@ -11,8 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 let resend = null;
-if (dotenv.RESEND_API_KEY) {
-  resend = new Resend(dotenv.RESEND_API_KEY);
+if (process.env.RESEND_API_KEY) {
+  resend = new Resend(process.env.RESEND_API_KEY);
 }
 
 app.post("/api/contact", async (req, res) => {

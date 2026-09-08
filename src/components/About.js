@@ -1,9 +1,52 @@
+import { useEffect, useRef } from "react";
 import "./About.css";
+import "./ProfileImage.css";
 import happyImage from "../assets/happy.jpg";
 
 const About = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return undefined;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return undefined;
+
+    let frame = null;
+
+    const handleMouseMove = (event) => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        const rect = section.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
+        // Rotate the existing hero gradient toward the cursor instead of
+        // overlaying a new color, so the palette stays unchanged.
+        const angle = 135 + (x - 50) * 1.5 + (y - 50) * 0.5;
+        section.style.setProperty("--gradient-angle", `${angle}deg`);
+        frame = null;
+      });
+    };
+
+    const handleMouseLeave = () => {
+      section.style.setProperty("--gradient-angle", "135deg");
+    };
+
+    section.addEventListener("mousemove", handleMouseMove);
+    section.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      section.removeEventListener("mousemove", handleMouseMove);
+      section.removeEventListener("mouseleave", handleMouseLeave);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, []);
+
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="about-section" ref={sectionRef}>
       <div className="about-container">
         <div className="about-content">
           <div className="about-text">
@@ -52,13 +95,9 @@ const About = () => {
             </div>
           </div>
           <div className="about-image">
-            <div
-              className="profile-image"
-              role="img"
-              aria-label="Profile picture of the developer"
-            >
-              <img 
-                src={happyImage} 
+            <div className="profile-image">
+              <img
+                src={happyImage}
                 alt="Profile picture of me with my dog, Happy."
                 className="profile-img"
               />

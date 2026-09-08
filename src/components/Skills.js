@@ -1,4 +1,16 @@
 import "./Skills.css";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiPython,
+  SiTailwindcss,
+  SiTypescript,
+  SiDrupal,
+  SiFastapi,
+  SiGit,
+  SiNodedotjs,
+  SiPostgresql,
+} from "react-icons/si";
 
 const Skills = () => {
   const skillCategories = [
@@ -7,23 +19,28 @@ const Skills = () => {
       skills: [
         {
           name: "React",
+          icon: SiReact,
           description: "JavaScript library for building user interfaces"
         },
         {
-          name: "JavaScript",
+          name: "Next.js",
+          icon: SiNextdotjs,
           description:
-            "Programming language for making web projects interactive"
+            "React-based web framework for building server-side rendered applications"
         },
         {
-          name: "HTML5",
-          description: "Markup language for structuring web content"
+          name: "Python",
+          icon: SiPython,
+          description: "High-level programming language for general-purpose coding"
         },
         {
-          name: "CSS3",
-          description: "Styling language for designing web layouts"
+          name: "Tailwind CSS",
+          icon: SiTailwindcss,
+          description: "Utility-first CSS framework for rapid UI development"
         },
         {
           name: "TypeScript",
+          icon: SiTypescript,
           description: "Superset of JavaScript that adds static types"
         },
       ],
@@ -33,23 +50,29 @@ const Skills = () => {
       skills: [
         {
           name: "Drupal",
+          icon: SiDrupal,
           description: "Content management system for building websites"
         },
         {
+          name: "FastAPI",
+          icon: SiFastapi,
+          description: "Python framework for building APIs quickly"
+        },
+        {
           name: "Git",
+          icon: SiGit,
           description:
             "Version control system for tracking changes in source code"
         },
         {
           name: "Node.js",
+          icon: SiNodedotjs,
           description:
             "JavaScript runtime for building server-side applications"
         },
-        { name: "NPM", 
-          description: "Package manager for JavaScript"
-        },
-        { name: "SQL",
-          description: "Structured Query Language for managing relational databases"
+        { name: "PostgreSQL",
+          icon: SiPostgresql,
+          description: "Open-source relational database system"
         }
       ],
     },
@@ -70,14 +93,20 @@ const Skills = () => {
             <div key={index} className="skill-category">
               <h3>{category.title}</h3>
               <div className="skill-cards">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-card">
-                    <div className="skill-content">
-                      <h4 className="skill-name">{skill.name}</h4>
-                      <p className="skill-description">{skill.description}</p>
+                {category.skills.map((skill, skillIndex) => {
+                  const SkillIcon = skill.icon;
+                  return (
+                    <div key={skillIndex} className="skill-card">
+                      <div className="skill-content">
+                        <h4 className="skill-name">
+                          <SkillIcon className="skill-icon" aria-hidden="true" />
+                          {skill.name}
+                        </h4>
+                        <p className="skill-description">{skill.description}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
