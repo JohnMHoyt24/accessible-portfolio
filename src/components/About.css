@@ -10,10 +10,9 @@
 .about-section {
   background: linear-gradient(135deg, var(--gradient-hero-start) 0%, var(--gradient-hero-end) 100%);
   color: white;
-  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 80px 20px 60px;
+  padding: 60px 20px 40px;
 }
 
 .about-container {
@@ -25,7 +24,7 @@
 .about-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
   animation: fadeIn 1s ease-in-out forwards;
 }
@@ -33,22 +32,22 @@
 .about-text h2 {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   text-align: left;
 }
 
 .about-description {
   font-size: 1.2rem;
   line-height: 1.8;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   opacity: 0.95;
 }
 
 .about-highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .highlight-item {
@@ -94,7 +93,7 @@
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 60px 15px 40px;
+    padding: 40px 15px 30px;
   }
 
   .about-text h2 {

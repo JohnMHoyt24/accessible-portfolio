@@ -1,8 +1,7 @@
 .projects-section {
   background: linear-gradient(135deg, var(--gradient-hero-start) 0%, var(--gradient-hero-end) 100%);
   color: white;
-  padding: 80px 20px 60px;
-  min-height: 100vh;
+  padding: 60px 20px 40px;
 }
 
 .projects-container {
@@ -12,7 +11,7 @@
 
 .projects-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .projects-header h2 {
@@ -30,15 +29,15 @@
 }
 
 .projects-showcase {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .project-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: start;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-image {
@@ -120,13 +119,13 @@
 .project-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   opacity: 0.95;
 }
 
 .project-technologies,
 .project-features {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .project-technologies h4,
@@ -315,7 +314,7 @@
 
 @media (max-width: 768px) {
   .projects-section {
-    padding: 60px 15px 40px;
+    padding: 40px 15px 30px;
   }
   
   .projects-header h2 {
