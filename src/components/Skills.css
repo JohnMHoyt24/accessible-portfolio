@@ -66,6 +66,14 @@
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: var(--color-primary-hover);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.skill-icon {
+  flex-shrink: 0;
+  font-size: 1.4rem;
 }
 
 .skill-description {
