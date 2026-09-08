@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
+import { FaChevronUp } from "react-icons/fa";
 import "./ScrollToTop.css";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+    setIsVisible(window.pageYOffset > 0);
   };
 
   const scrollToTop = () => {
@@ -26,17 +23,19 @@ const ScrollToTop = () => {
     };
   }, []);
 
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <div className="scroll-to-top">
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          aria-label="Scroll to top"
-          className="scroll-button"
-        >
-          ↑
-        </button>
-      )}
+      <button
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
+        className="scroll-button"
+      >
+        <FaChevronUp />
+      </button>
     </div>
   );
 
