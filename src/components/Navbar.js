@@ -79,6 +79,7 @@ const Navbar = () => {
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
           aria-expanded={isMobileMenuOpen}
+          aria-controls="navbar-menu"
         >
           <span className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
             <span></span>
@@ -86,19 +87,17 @@ const Navbar = () => {
             <span></span>
           </span>
         </button>
-        
+
         {/* Navigation menu list */}
-        <ul className={`navbar-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`} role="menubar">
+        <ul id="navbar-menu" className={`navbar-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           {/* About Me navigation item */}
-          <li role="none">
+          <li>
             <button
               // Apply CSS classes: base 'nav-link' class plus 'active' class conditionally
               className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
               // Handle click to navigate to about section
               onClick={() => handleNavClick('about')}
-              // Accessibility attributes
-              role="menuitem"
-              aria-current={activeSection === 'about' ? 'page' : undefined}
+              aria-current={activeSection === 'about' ? 'true' : undefined}
             >
               About Me
             </button>
@@ -108,41 +107,37 @@ const Navbar = () => {
             <button
               className={`nav-link ${activeSection === 'quotes' ? 'active' : ''}`}
               onClick={() => handleNavClick('quotes')}
-              role="menuitem"
-              aria-current={activeSection === 'quotes' ? 'page' : undefined}
+              aria-current={activeSection === 'quotes' ? 'true' : undefined}
             >
               Quotes
             </button>
           </li>
           {/* My Skills navigation item */}
-          <li role="none">
+          <li>
             <button
               className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
               onClick={() => handleNavClick('skills')}
-              role="menuitem"
-              aria-current={activeSection === 'skills' ? 'page' : undefined}
+              aria-current={activeSection === 'skills' ? 'true' : undefined}
             >
               My Skills
             </button>
           </li>
           {/* Projects navigation item */}
-          <li role="none">
+          <li>
             <button
               className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
               onClick={() => handleNavClick('projects')}
-              role="menuitem"
-              aria-current={activeSection === 'projects' ? 'page' : undefined}
+              aria-current={activeSection === 'projects' ? 'true' : undefined}
             >
               Projects
             </button>
           </li>
           {/* Contact Me navigation item */}
-          <li role="none">
+          <li>
             <button
               className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
               onClick={() => handleNavClick('contact')}
-              role="menuitem"
-              aria-current={activeSection === 'contact' ? 'page' : undefined}
+              aria-current={activeSection === 'contact' ? 'true' : undefined}
             >
               Contact Me
             </button>

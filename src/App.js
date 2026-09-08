@@ -14,7 +14,7 @@ function App() {
         Skip to main content
       </a>
       <Navbar />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <About />
         <Quotes />
         <Skills />

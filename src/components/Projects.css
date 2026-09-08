@@ -1,5 +1,5 @@
 .projects-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--gradient-hero-start) 0%, var(--gradient-hero-end) 100%);
   color: white;
   padding: 80px 20px 60px;
   min-height: 100vh;
@@ -85,7 +85,7 @@
 
 .project-link {
   padding: 0.8rem 1.5rem;
-  background: #007bff;
+  background: var(--color-primary);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -94,7 +94,7 @@
 }
 
 .project-link:hover {
-  background: #0056b3;
+  background: var(--color-primary-hover);
   transform: translateY(-2px);
 }
 
@@ -167,7 +167,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #28a745;
+  color: var(--color-success);
   font-weight: bold;
 }
 
@@ -197,7 +197,7 @@
 }
 
 .nav-button:focus {
-  outline: 3px solid #007bff;
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -255,7 +255,7 @@
 }
 
 .project-card.active {
-  border: 2px solid #007bff;
+  border: 2px solid var(--color-primary);
   box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
 }
 
@@ -368,7 +368,7 @@
   }
   
   .project-card.active {
-    border-color: #007bff;
+    border-color: var(--color-primary);
   }
   
   .tech-tag,

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Contact.css";
-import happyImage from "../assets/happy.jpg";
+import "./ProfileImage.css";
 import profileImage from "../assets/profile.jpg";
 
 const Contact = () => {
@@ -60,18 +60,21 @@ const Contact = () => {
       value: "mailto:jmhoyt6355@gmail.com?subject=Contact%20from%20Portfolio",
       icon: "✉️",
       description: "Send me an email anytime",
+      external: false,
     },
     {
       type: "LinkedIn",
       value: "https://www.linkedin.com/in/john-m-hoyt/",
       icon: "💼",
       description: "Connect with me professionally",
+      external: true,
     },
     {
       type: "GitHub",
       value: "https://github.com/JohnMHoyt24",
       icon: "💻",
       description: "Check out my code repositories",
+      external: true,
     }
   ];
 
@@ -81,13 +84,9 @@ const Contact = () => {
         <div className="contact-header">
           <h2>Get In Touch</h2>
           <div className="about-image">
-            <div
-              className="profile-image"
-              role="img"
-              aria-label="Profile picture of the developer"
-            >
-              <img 
-                src={profileImage} 
+            <div className="profile-image">
+              <img
+                src={profileImage}
                 alt="A professional picture of me, the developer."
                 className="profile-img"
               />
@@ -117,7 +116,18 @@ const Contact = () => {
                   <div className="method-content">
                     <h4>{method.type}</h4>
                     <p className="method-description">{method.description}</p>
-                    <a className="method-value" href={method.value} target="_blank">Click to {method.type}</a>
+                    <a
+                      className="method-value"
+                      href={method.value}
+                      {...(method.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                    >
+                      Click to {method.type}
+                      {method.external && (
+                        <span className="sr-only"> (opens in a new tab)</span>
+                      )}
+                    </a>
                   </div>
                 </div>
               ))}

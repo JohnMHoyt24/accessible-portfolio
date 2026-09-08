@@ -1,4 +1,5 @@
 import "./About.css";
+import "./ProfileImage.css";
 import happyImage from "../assets/happy.jpg";
 
 const About = () => {
@@ -52,13 +53,9 @@ const About = () => {
             </div>
           </div>
           <div className="about-image">
-            <div
-              className="profile-image"
-              role="img"
-              aria-label="Profile picture of the developer"
-            >
-              <img 
-                src={happyImage} 
+            <div className="profile-image">
+              <img
+                src={happyImage}
                 alt="Profile picture of me with my dog, Happy."
                 className="profile-img"
               />

@@ -9,7 +9,7 @@
 
 @keyframes blink {
   0%, 49% {
-    border-color: #007bff;
+    border-color: var(--color-primary);
   }
   50%, 99% {
     border-color: transparent;
@@ -49,11 +49,11 @@
 .navbar-brand h1 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #007bff;
+  color: var(--color-primary);
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #007bff;
+  border-right: 3px solid var(--color-primary);
   animation: typing 1.5s steps(12, end) forwards, blink 0.5s step-end 5 forwards;
   width: 0;
 }
@@ -71,7 +71,7 @@
   border: none;
   font-size: 1rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-text);
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -81,19 +81,19 @@
 }
 
 .nav-link:hover {
-  background-color: #f8f9fa;
-  color: #007bff;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
   transform: translateY(-2px);
 }
 
 .nav-link:focus {
-  outline: 3px solid #007bff;
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
   background-color: #e3f2fd;
 }
 
 .nav-link.active {
-  color: #007bff;
+  color: var(--color-primary);
   background-color: #e3f2fd;
 }
 
@@ -105,7 +105,7 @@
   transform: translateX(-50%);
   width: 30px;
   height: 3px;
-  background-color: #007bff;
+  background-color: var(--color-primary);
   border-radius: 2px;
 }
 
@@ -131,7 +131,7 @@
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #333;
+  background-color: var(--color-text);
   border-radius: 2px;
   transition: all 0.3s ease;
 }

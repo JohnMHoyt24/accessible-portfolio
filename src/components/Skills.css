@@ -1,7 +1,7 @@
 /* General section styling */
 .skills-section {
   padding: 4rem 2rem;
-  background-color: #f4f4f9;
+  background-color: var(--color-bg-alt);
   text-align: center;
 }
 
@@ -13,12 +13,12 @@
 .skills-header h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--color-text);
 }
 
 .skills-subtitle {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--color-text-muted);
   margin-bottom: 2rem;
 }
 
@@ -65,12 +65,12 @@
   font-size: 1.3rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: #0056b3;
+  color: var(--color-primary-hover);
 }
 
 .skill-description {
   font-size: 1rem;
-  color: #555;
+  color: var(--color-text-subtle);
   margin: 0;
 }
 

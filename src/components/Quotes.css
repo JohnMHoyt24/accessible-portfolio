@@ -3,7 +3,7 @@
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
-    color: #333;
+    color: var(--color-text);
 }
 .quotes-container {
     display: flex;
@@ -11,9 +11,9 @@
     gap: 15px;
     padding: 10px;
 }
-.quote-item {
+.quote-card {
     background-color: #f9f9f9;
-    border-left: 5px solid #4CAF50;
+    border-left: 5px solid var(--color-success);
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -21,10 +21,10 @@
     font-size: 1.2em;
     margin-bottom: 10px;
     padding: 10px;
-    color: #555;
+    color: var(--color-text-subtle);
 }
 .quote-author {
     font-size: 1em;
     text-align: right;
-    color: #888;
+    color: #595959;
 }
