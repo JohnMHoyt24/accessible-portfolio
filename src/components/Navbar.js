@@ -1,10 +1,12 @@
 // Import React hooks for state management and side effects
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+// Icon for the Recently Played dropdown toggle
+import { FaMusic } from 'react-icons/fa';
 // Import CSS styles for the navbar component
 import './Navbar.css';
 
 // Main Navbar component - a functional component that provides navigation for the portfolio
-const Navbar = () => {
+const Navbar = ({ isRecentlyPlayedOpen, onToggleRecentlyPlayed, adminSession }) => {
   // State to track whether the navbar should be sticky (fixed position when scrolling)
   const [isSticky, setIsSticky] = useState(false);
   // State to track which navigation section is currently active/selected
@@ -13,6 +15,59 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   // State to track whether the horizontal nav options are collapsed (desktop view)
   const [isNavCollapsed, setIsNavCollapsed] = useState(false);
+  // State for the admin login popover next to the site title
+  const [showAdminLogin, setShowAdminLogin] = useState(false);
+  const [adminLoginForm, setAdminLoginForm] = useState({ username: '', password: '' });
+  // Ref to the Recently Played toggle button, used to restore focus when its dropdown closes
+  const recentlyPlayedButtonRef = useRef(null);
+  const wasRecentlyPlayedOpen = useRef(false);
+  const adminLoginRef = useRef(null);
+
+  const {
+    isAuthenticated: isAdminAuthenticated,
+    login: adminLogin,
+    logout: adminLogout,
+    error: adminLoginError,
+    isLoading: isAdminLoggingIn,
+  } = adminSession;
+
+  // Return focus to the toggle button once the Recently Played dropdown closes
+  useEffect(() => {
+    if (wasRecentlyPlayedOpen.current && !isRecentlyPlayedOpen) {
+      recentlyPlayedButtonRef.current?.focus();
+    }
+    wasRecentlyPlayedOpen.current = isRecentlyPlayedOpen;
+  }, [isRecentlyPlayedOpen]);
+
+  // Close the admin login popover on outside click or Escape
+  useEffect(() => {
+    if (!showAdminLogin) return;
+
+    const handleClickOutside = (e) => {
+      if (adminLoginRef.current && !adminLoginRef.current.contains(e.target)) {
+        setShowAdminLogin(false);
+      }
+    };
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setShowAdminLogin(false);
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [showAdminLogin]);
+
+  const handleAdminLoginSubmit = async (e) => {
+    e.preventDefault();
+    const success = await adminLogin(adminLoginForm.username, adminLoginForm.password);
+    if (success) {
+      setAdminLoginForm({ username: '', password: '' });
+      setShowAdminLogin(false);
+    }
+  };
 
   // useEffect hook to handle scroll events and determine when navbar should become sticky
   useEffect(() => {
@@ -78,8 +133,74 @@ const Navbar = () => {
         {/* Brand/logo section of the navbar */}
         <div className="navbar-brand navbar-title">
           <h1>John's World</h1>
+
+          {/* Admin login control, next to the site title */}
+          <div className="navbar-admin" ref={adminLoginRef}>
+            {isAdminAuthenticated ? (
+              <button type="button" className="navbar-admin-button" onClick={adminLogout}>
+                Log out (admin)
+              </button>
+            ) : (
+              <>
+                <button
+                  type="button"
+                  className="navbar-admin-button"
+                  onClick={() => setShowAdminLogin((v) => !v)}
+                  aria-haspopup="dialog"
+                  aria-expanded={showAdminLogin}
+                >
+                  Admin Login
+                </button>
+                {showAdminLogin && (
+                  <form
+                    className="navbar-admin-login"
+                    onSubmit={handleAdminLoginSubmit}
+                    role="dialog"
+                    aria-label="Admin login"
+                  >
+                    <label className="sr-only" htmlFor="nav-admin-username">
+                      Username
+                    </label>
+                    <input
+                      id="nav-admin-username"
+                      type="text"
+                      placeholder="Username"
+                      autoComplete="username"
+                      value={adminLoginForm.username}
+                      onChange={(e) =>
+                        setAdminLoginForm((f) => ({ ...f, username: e.target.value }))
+                      }
+                      required
+                    />
+                    <label className="sr-only" htmlFor="nav-admin-password">
+                      Password
+                    </label>
+                    <input
+                      id="nav-admin-password"
+                      type="password"
+                      placeholder="Password"
+                      autoComplete="current-password"
+                      value={adminLoginForm.password}
+                      onChange={(e) =>
+                        setAdminLoginForm((f) => ({ ...f, password: e.target.value }))
+                      }
+                      required
+                    />
+                    <button type="submit" disabled={isAdminLoggingIn}>
+                      {isAdminLoggingIn ? 'Logging in…' : 'Log in'}
+                    </button>
+                    {adminLoginError && (
+                      <p role="alert" className="navbar-admin-login-error">
+                        {adminLoginError}
+                      </p>
+                    )}
+                  </form>
+                )}
+              </>
+            )}
+          </div>
         </div>
-        
+
         {/* Mobile menu button */}
         <button
           className="mobile-menu-button"
@@ -97,6 +218,19 @@ const Navbar = () => {
 
         {/* Wrapper grouping the collapse toggle with the horizontal menu it controls */}
         <div className="navbar-menu-group">
+          {/* Button that opens the Recently Played dropdown */}
+          <button
+            ref={recentlyPlayedButtonRef}
+            className="navbar-recently-played-toggle"
+            onClick={onToggleRecentlyPlayed}
+            aria-label="Recently played tracks"
+            aria-haspopup="dialog"
+            aria-expanded={isRecentlyPlayedOpen}
+          >
+            <FaMusic aria-hidden="true" />
+            <span className="navbar-tooltip" role="tooltip">Recently played</span>
+          </button>
+
           {/* Button that collapses/expands the horizontal nav options */}
           <button
             className="navbar-collapse-toggle"
