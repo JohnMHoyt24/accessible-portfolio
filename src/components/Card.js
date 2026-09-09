@@ -1,6 +1,6 @@
 import "./Card.css";
 
-const Card = ({ title, description, url, image, technologies = [] }) => {
+const Card = ({ title, description, url, image, technologies = [], linkLabel = "View Project" }) => {
   return (
     <article className="project-card" aria-label={title}>
       {image && (
@@ -29,7 +29,7 @@ const Card = ({ title, description, url, image, technologies = [] }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View Project
+              {linkLabel}
               <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </p>

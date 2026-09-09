@@ -3,6 +3,7 @@ import About from './components/About';
 import Quotes from './components/Quotes';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import RecentlyPlayed from './components/RecentlyPlayed';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
@@ -19,6 +20,7 @@ function App() {
         <Quotes />
         <Skills />
         <Projects />
+        <RecentlyPlayed />
         <Contact />
         <ScrollToTop />
       </main>
