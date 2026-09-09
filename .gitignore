@@ -20,3 +20,6 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Runtime data (hidden Recently Played tracks, managed via admin login)
+/data/hidden-tracks.json
