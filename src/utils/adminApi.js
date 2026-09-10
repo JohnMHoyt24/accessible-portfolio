@@ -1,4 +1,4 @@
-const BASE_URL = (process.env.REACT_APP_ADMIN_API_URL || "").replace(/\/$/, "");
+const BASE_URL = (process.env.REACT_APP_API_URL || "").replace(/\/$/, "");
 
 const request = async (path, options = {}) => {
   const res = await fetch(`${BASE_URL}${path}`, {
@@ -17,7 +17,7 @@ const request = async (path, options = {}) => {
   }
 
   if (!res.ok) {
-    const message = data?.message || "Request failed";
+    const message = data?.detail || "Request failed";
     throw new Error(message);
   }
 
@@ -25,28 +25,28 @@ const request = async (path, options = {}) => {
 };
 
 export const login = (username, password) =>
-  request("/api/admin/login", {
+  request("/admin/login", {
     method: "POST",
     body: JSON.stringify({ username, password }),
   });
 
 export const logout = (token) =>
-  request("/api/admin/logout", {
+  request("/admin/logout", {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
   });
 
-export const getHiddenTracks = () => request("/api/hidden-tracks");
+export const getHiddenTracks = () => request("/admin/hidden-tracks");
 
 export const hideTrack = (token, id) =>
-  request("/api/hidden-tracks", {
+  request("/admin/hidden-tracks", {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
     body: JSON.stringify({ id }),
   });
 
 export const unhideTrack = (token, id) =>
-  request(`/api/hidden-tracks/${encodeURIComponent(id)}`, {
+  request(`/admin/hidden-tracks/${encodeURIComponent(id)}`, {
     method: "DELETE",
     headers: { Authorization: `Bearer ${token}` },
   });

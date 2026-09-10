@@ -76,7 +76,7 @@ const RecentlyPlayed = ({ isOpen, onClose, adminSession }) => {
 
     adminApi
       .getHiddenTracks()
-      .then((data) => setHiddenIds(data.hiddenIds || []))
+      .then((data) => setHiddenIds(data.hidden_ids || []))
       .catch(() => setHiddenIds([]));
   }, []);
 
@@ -121,7 +121,7 @@ const RecentlyPlayed = ({ isOpen, onClose, adminSession }) => {
       const data = isHidden
         ? await adminApi.unhideTrack(token, key)
         : await adminApi.hideTrack(token, key);
-      setHiddenIds(data.hiddenIds || []);
+      setHiddenIds(data.hidden_ids || []);
     } catch {
       // Leave state unchanged; the button will simply not reflect the change.
     } finally {
