@@ -61,8 +61,9 @@ const RecentlyPlayed = ({ isOpen, onClose, adminSession }) => {
       setStatus("error");
       return;
     }
+    const baseUrl = apiUrl.replace(/\/$/, "");
 
-    fetch(`${apiUrl}/tracks/recent`)
+    fetch(`${baseUrl}/tracks/recent`)
       .then((res) => {
         if (!res.ok) throw new Error("Request failed");
         return res.json();
