@@ -33,6 +33,20 @@
   .embla__slide {
     padding: 10px;
   }
+
+  .embla__button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .embla__button--prev {
+    left: 4px;
+  }
+
+  .embla__button--next {
+    right: 4px;
+  }
 }
 
 .embla__button {

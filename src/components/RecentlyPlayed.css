@@ -74,7 +74,7 @@
 
 .recently-played-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
   gap: 1.5rem;
 }
 
@@ -116,6 +116,29 @@
 
   .recently-played-header h2 {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recently-played-backdrop {
+    padding: 4.5rem 0.5rem 1rem;
+  }
+
+  .recently-played-panel {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .recently-played-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .recently-played-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .recently-played-grid {
+    gap: 1rem;
   }
 }
 

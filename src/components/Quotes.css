@@ -28,3 +28,40 @@
     text-align: right;
     color: #595959;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .quotes-heading {
+        font-size: 1.7em;
+        margin-bottom: 15px;
+    }
+
+    .quote-text {
+        font-size: 1.1em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quotes-heading {
+        font-size: 1.4em;
+    }
+
+    .quotes-container {
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .quote-card {
+        padding: 12px;
+    }
+
+    .quote-text {
+        font-size: 1em;
+        padding: 6px;
+    }
+
+    .quote-author {
+        font-size: 0.9em;
+    }
+}
